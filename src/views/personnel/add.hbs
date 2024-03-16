@@ -1,0 +1,41 @@
+<div class="container w-50 mt-5">
+  <form method="post" action="/add">
+    <div class="card">
+      <div class="card-header">
+        Ajouter un Membre
+      </div>
+      <div class="card-body">
+        <div class="mb-3">
+          <label for="firstname" class="form-label">Prénom</label>
+          <input
+            type="text"
+            class="form-control"
+            id="firstname"
+            name="firstname"
+            placeholder="votre prenom"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="lastname" class="form-label">Nom</label>
+          <input
+            type="text"
+            class="form-control"
+            id="lastname"
+            name="lastname"
+            placeholder="votre nom"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="birthday" class="form-label">Date de naissance</label>
+          <input
+            type="number"
+            class="form-control"
+            id="birthday"
+            name="birthday"
+          />
+        </div>
+        <button type="submit" class="btn btn-success w-50">Enregistrer</button>
+      </div>
+    </div>
+  </form>
+</div>

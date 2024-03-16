@@ -1,0 +1,58 @@
+<div class="container mt-5 w-50">
+  {{#if personnel}}
+    {{#each personnel}}
+      <form action="/modifier/{{id}}" method="post">
+        <div class="card">
+          <div class="card-header">
+            Information du personnel
+          </div>
+          <div class="card-body">
+            <div class="mb-3">
+              <label for="firstname" class="form-label">Prénom</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstname"
+                name="firstname"
+                placeholder="votre prénom"
+                value="{{firstname}}"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="lastname" class="form-label">Nom</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastname"
+                name="lastname"
+                placeholder="votre nom"
+                value="{{lastname}}"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="birthday" class="form-label">Date de naissance</label>
+              <input
+                type="number"
+                class="form-control"
+                id="birthday"
+                name="birthday"
+                value="{{age}}"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control d-none"
+                name="id"
+                placeholder="votre prénom"
+                value="{{id}}"
+              />
+            </div>
+            <button type="submit" class="btn btn-success w-50">Modifier</button>
+          </div>
+        </div>
+      </form>
+    {{/each}}
+  {{else}}
+  {{/if}}
+</div>

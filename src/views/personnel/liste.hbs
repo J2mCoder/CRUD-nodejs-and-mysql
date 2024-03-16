@@ -1,0 +1,42 @@
+<div class="container mt-5">
+  {{#if personnel}}
+    <table class="table table-bordered table-hover table-responsive">
+      <thead>
+        <tr>
+          <th scope="col">Prenom</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Age</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each personnel}}
+        <tr>
+          <th>{{firstname}}</th>
+          <td>{{lastname}}</td>
+          <td>{{age}} ans</td>
+          <td>
+            <a href="/effacer/{{id}}" class="btn btn-danger">Effacer</a>
+            <a href="/modifier/{{id}}" class="btn btn-primary">Modifier</a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">Liste de personnel</td>
+        </tr>
+      </tfoot>
+    </table>
+  {{else}}
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title">Espace membres</h3>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Ajouter un Membre</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="/add" class=" btn btn-primary">Ajouter une personne</a>
+  </div>
+  {{/if}}
+</div>
